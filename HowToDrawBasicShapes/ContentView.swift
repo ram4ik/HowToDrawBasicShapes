@@ -10,7 +10,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        
+        //Creating image view
+        VStack {
+            Image("swimming")
+            .resizable()
+            .frame(width: 250, height: 250)
+            .clipShape(Circle())
+            .shadow(radius: 15)
+            
+            // Draw a rectangle
+            Rectangle()
+                .fill(Color.blue)
+                .padding()
+            
+            // Draw a circle
+            Circle()
+                .fill(Color.red)
+                .padding()
+            
+            // Draw a rounded rectangle
+            RoundedRectangle(cornerRadius: 20)
+                .padding()
+                .foregroundColor(.green)
+            
+            
+        }
     }
 }
 
